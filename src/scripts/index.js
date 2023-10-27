@@ -38,6 +38,7 @@ async function getUserData(userName) {
 
   const repositoriesRespose = await getRepositories(userName);
 
+  console.log(userRespose); //pegando a info que vem da API -consulta
   user.setInfo(userRespose);
   user.setRepositories(repositoriesRespose);
 

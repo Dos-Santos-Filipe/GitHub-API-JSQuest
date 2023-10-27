@@ -10,6 +10,10 @@ const screen = {
                             user.name ?? "Não possui nome cadastrado 🙁"
                           }</h1>
                           <p>${user.bio ?? "Não possui bio cadastrada 🙁"}</p>
+                          <div class="follow">
+                            <p class="followers">Seguidores: ${user.followers}</p>
+                            <p class="following">Seguindo: ${user.following}</p>
+                          </div>
                       </div>
                     </div>`;
 
