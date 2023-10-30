@@ -11,8 +11,8 @@ const screen = {
                           }</h1>
                           <p>${user.bio ?? "Não possui bio cadastrada 🙁"}</p>
                           <div class="follow">
-                            <p class="followers">Seguidores: ${user.followers}</p>
-                            <p class="following">Seguindo: ${user.following}</p>
+                            <p class="followers"><span>Seguidores: </span>${user.followers}</p>
+                            <p class="following"><span>Seguindo: </span>${user.following}</p>
                           </div>
                       </div>
                     </div>`;
