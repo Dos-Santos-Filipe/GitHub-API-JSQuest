@@ -111,6 +111,14 @@ main {
     font-weight: 400;
     line-height: 23px;
   }
+
+  .profile-data .info .follow {
+    margin-top: 15px;
+  }
+
+  .profile-data .info .follow span {
+    font-weight: bold;
+  }
   
   /* REPOSITORIES */
   
