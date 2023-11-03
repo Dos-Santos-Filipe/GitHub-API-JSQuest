@@ -29,9 +29,27 @@ const screen = {
                                             <ul>${repositoriesItens}</ul>
                                         </div>`;
     }
+
+    let eventsItens = "";
+    user.events.forEach(
+      event =>
+        eventsItens += `<li><span>${event.repo.name}</span> - ${event.payload.ref}</li>`
+    );
+
+    if(user.events.length > 0) {
+      this.userProfile.innerHTML += `<div class="events">
+                                            <h2>Eventos</h2>
+                                            <ul>${eventsItens}</ul>
+                                        </div>`;
+    }
   },
   renderNotFound(){
     this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
+  },
+  renderNoEvents(){
+    this.userProfile.innerHTML += `<div class="events">
+                                    <p>O usuário não possui eventos do tipo CreateEvent e PushEvent</p>
+                                  </div>`;
   },
 };
 

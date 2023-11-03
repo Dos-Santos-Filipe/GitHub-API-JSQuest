@@ -1,5 +1,6 @@
 import { getUser } from "./services/user.js";
 import { getRepositories } from "./services/repositories.js";
+import { getEvents } from "./services/events.js";
 
 import { user } from "./objects/user.js";
 import { screen } from "./objects/screen.js";
@@ -38,9 +39,18 @@ async function getUserData(userName) {
 
   const repositoriesRespose = await getRepositories(userName);
 
-  console.log(userRespose); //pegando a info que vem da API -consulta
+  const eventsResponse = await getEvents(userName);
+  const filtredEvents = eventsResponse.filter(e => e.type === "CreateEvent" || e.type === "PushEvent");
+
+  console.log(filtredEvents); //pegando a info que vem da API -consulta
   user.setInfo(userRespose);
   user.setRepositories(repositoriesRespose);
-
+  user.setEvents(filtredEvents);
+  
   screen.renderUser(user);
+
+  if(filtredEvents.length === 0) {
+    screen.renderNoEvents();
+    return;
+  };
 }
