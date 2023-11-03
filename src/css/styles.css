@@ -22,7 +22,7 @@ main {
 }
 
 .section {
-  padding: 70px 0;  
+  padding: 70px 0 50px;  
 }
 
 .container {
@@ -149,4 +149,28 @@ main {
   
   .container .profile-data.hide{
     display: none;
+  }
+
+  /* Events */
+
+  .profile-data .events,
+  .profile-data .events ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+  }
+
+  .profile-data .events h2 {
+    margin-bottom: 5px;
+  }
+
+  .events ul li {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.737);
+  }
+
+  .events ul li span {
+    font-weight: bold;
+    color: #000000;
   }

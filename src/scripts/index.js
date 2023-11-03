@@ -46,6 +46,11 @@ async function getUserData(userName) {
   user.setInfo(userRespose);
   user.setRepositories(repositoriesRespose);
   user.setEvents(filtredEvents);
-
+  
   screen.renderUser(user);
+
+  if(filtredEvents.length === 0) {
+    screen.renderNoEvents();
+    return;
+  };
 }
