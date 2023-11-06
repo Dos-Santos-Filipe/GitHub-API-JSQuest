@@ -22,7 +22,7 @@ main {
 }
 
 .section {
-  padding: 70px 0 50px;  
+  padding: 70px 0 0;  
 }
 
 .container {
@@ -152,6 +152,10 @@ main {
   }
 
   /* Events */
+
+  .profile-data .events {
+    padding: 50px;
+  }
 
   .profile-data .events,
   .profile-data .events ul {

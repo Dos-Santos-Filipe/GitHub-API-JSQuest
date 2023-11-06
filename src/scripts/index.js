@@ -42,7 +42,7 @@ async function getUserData(userName) {
   const eventsResponse = await getEvents(userName);
   const filtredEvents = eventsResponse.filter(e => e.type === "CreateEvent" || e.type === "PushEvent");
 
-  console.log(filtredEvents); //pegando a info que vem da API -consulta
+  console.log(repositoriesRespose); //pegando a info que vem da API -consulta
   user.setInfo(userRespose);
   user.setRepositories(repositoriesRespose);
   user.setEvents(filtredEvents);
